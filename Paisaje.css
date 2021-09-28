@@ -1,0 +1,122 @@
+:root {
+    --rotateSpeed: 30s;
+    --bounceSpeed: 5s;
+}
+
+body {
+    width: 100vw;
+    height: 100vw;
+    background: linear-gradient(to bottom, #33ccff 0%, #7a6fc6 50%, #17077d 10%);
+    padding: 1%;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#cloud-circle {
+    width: 400px;
+    height: 200px;
+    border-radius: 50%;
+    filter: url(#filter);
+    box-shadow: 400px 400px 60px 0px #fff;
+    position: absolute;
+    top: -320px;
+    left: 100px;
+    justify-content: center;
+}
+
+.ball {
+    animation: ballBounce var(--bounceSpeed) infinite ease-in, sceneRotate var(--rotateSpeed) infinite linear reverse;
+    width: 4em;
+    height: 4em;
+    border-radius: 50%;
+    background: green;
+    left: -.5em;
+    bottom: 1em;
+    background-image: radial-gradient( circle at top, #ff7, 65%, #000)
+}
+
+@keyframes ballBounce {
+    10% {
+        bottom: 1em;
+    }
+    50% {
+        bottom: 3em;
+        animation-timing-function: ease-out;
+        transform: translateY(500px)
+    }
+}
+
+.ballshadow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(#0007, #0000, 10%);
+}
+
+.rectangle {
+    width: 200px;
+    height: 20px;
+    background-color: green;
+    padding: 0px;
+    margin: 510px;
+    border-radius: 10px;
+}
+
+.ball2 {
+    animation: ballBounce var(--bounceSpeed) infinite ease-in, sceneRotate var(--rotateSpeed) infinite linear reverse;
+    width: 4em;
+    height: 4em;
+    border-radius: 50%;
+    background: green;
+    right: -.10em;
+    bottom: 1em;
+    background-image: radial-gradient( circle at top, #7eca9c, 65%, #000)
+}
+
+@keyframes ballBounce {
+    10% {
+        bottom: 1em;
+    }
+    50% {
+        bottom: 3em;
+        animation-timing-function: ease-out;
+        transform: translateY(500px)
+    }
+}
+
+.rectangle2 {
+    width: 200px;
+    height: 20px;
+    background-color: green;
+    padding: 0px;
+    margin: 510px;
+    border-radius: 10px;
+}
+
+.ball3 {
+    animation: ballBounce var(--bounceSpeed) infinite ease-in, sceneRotate var(--rotateSpeed) infinite linear reverse;
+    width: 4em;
+    height: 4em;
+    border-radius: 50%;
+    background: red;
+    left: -.10em;
+    bottom: 1em;
+    background-image: radial-gradient( circle at top, #cf059945, 65%, #000)
+}
+
+.ball4 {
+    animation: ballBounce var(--bounceSpeed) infinite ease-in, sceneRotate var(--rotateSpeed) infinite linear reverse;
+    width: 4em;
+    height: 4em;
+    border-radius: 50%;
+    background: blue;
+    left: -.10em;
+    bottom: 1em;
+    background-image: radial-gradient( circle at top, #064acb, 65%, #000)
+}
